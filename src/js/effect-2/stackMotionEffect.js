@@ -1,4 +1,4 @@
-import { throttle } from '../../../../kj/twist/js/utils.js';
+import { throttle } from '../utils.js';
 
 let winsize = {width: window.innerWidth, height: window.innerHeight};
 

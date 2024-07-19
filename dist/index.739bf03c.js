@@ -6679,7 +6679,7 @@ function getGlobalMatrix(element, inverse, adjustGOffset, includeScrollInFixed) 
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "StackMotionEffect", ()=>StackMotionEffect);
-var _utilsJs = require("../../../../kj/twist/js/utils.js");
+var _utilsJs = require("../utils.js");
 // Keeps track of the window's size for responsive adjustments.
 let winsize = {
     width: window.innerWidth,
@@ -6767,42 +6767,11 @@ class StackMotionEffect {
     }, 0);*/ }
 }
 
-},{"../../../../kj/twist/js/utils.js":"1YC2w","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1YC2w":[function(require,module,exports) {
-/**
- * Preloads images specified by the CSS selector.
- * @function
- * @param {string} [selector='img'] - CSS selector for target images.
- * @returns {Promise} - Resolves when all specified images are loaded.
- */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "preloadImages2", ()=>preloadImages2);
-parcelHelpers.export(exports, "throttle", ()=>throttle);
-const preloadImages2 = (selector = "img")=>{
-    return new Promise((resolve)=>{
-        // The imagesLoaded library is used to ensure all images (including backgrounds) are fully loaded.
-        imagesLoaded(document.querySelectorAll(selector), {
-            background: true
-        }, resolve);
-    });
-};
-const throttle = (func, limit)=>{
-    let inThrottle;
-    return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(()=>inThrottle = false, limit);
-        }
-    };
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cZnxF":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../utils.js":"72Dku"}],"cZnxF":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "StackMotionEffect", ()=>StackMotionEffect);
-var _utilsJs = require("../../../../kj/twist/js/utils.js");
+var _utilsJs = require("../utils.js");
 let winsize = {
     width: window.innerWidth,
     height: window.innerHeight
@@ -6878,11 +6847,11 @@ class StackMotionEffect {
     }, 0);*/ }
 }
 
-},{"../../../../kj/twist/js/utils.js":"1YC2w","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ksi6U":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../utils.js":"72Dku"}],"ksi6U":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "StackMotionEffect", ()=>StackMotionEffect);
-var _utilsJs = require("../../../../kj/twist/js/utils.js");
+var _utilsJs = require("../utils.js");
 let winsize = {
     width: window.innerWidth,
     height: window.innerHeight
@@ -6960,6 +6929,6 @@ class StackMotionEffect {
     }, 0);*/ }
 }
 
-},{"../../../../kj/twist/js/utils.js":"1YC2w","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequired2f1")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../utils.js":"72Dku"}]},["l9Mez","ebWYT"], "ebWYT", "parcelRequired2f1")
 
 //# sourceMappingURL=index.739bf03c.js.map
