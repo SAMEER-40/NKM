@@ -848,8 +848,8 @@ const init = ()=>{
             filter: "brightness(0%)",
             scrollTrigger: {
                 trigger: introCard,
-                start: "clamp(top bottom)",
-                end: "clamp(bottom top)",
+                start: ()=>window.innerWidth < 768 ? "top bottom" : "clamp(top bottom)",
+                end: ()=>window.innerWidth < 768 ? "bottom top" : "clamp(bottom top)",
                 scrub: true
             }
         });

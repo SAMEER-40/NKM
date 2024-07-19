@@ -272,25 +272,27 @@ const init = () => {
 
   // Select all grid intro card elements and apply animations on scroll
   const introCards = document.querySelectorAll('.intro1 .card');
-  introCards.forEach(introCard => {
-    gsap.to(introCard, {
-      ease: 'power1.in',
-      startAt: {
-        transformOrigin: '100% 50%',
-        filter: 'brightness(70%)'
-      },
-      rotationX: () => -60,
-      yPercent: () => gsap.utils.random(-100,0),
-      z: () => gsap.utils.random(-100,0),
-      filter: 'brightness(0%)',
-      scrollTrigger: {
-        trigger: introCard,
-        start: 'clamp(top bottom)',
-        end: 'clamp(bottom top)',
-        scrub: true,
-      }
-    });
+
+introCards.forEach(introCard => {
+  gsap.to(introCard, {
+    ease: 'power1.in',
+    startAt: {
+      transformOrigin: '100% 50%',
+      filter: 'brightness(70%)'
+    },
+    rotationX: () => -60,
+    yPercent: () => gsap.utils.random(-100, 0),
+    z: () => gsap.utils.random(-100, 0),
+    filter: 'brightness(0%)',
+    scrollTrigger: {
+      trigger: introCard,
+      start: () => window.innerWidth < 768 ? 'top bottom' : 'clamp(top bottom)',
+      end: () => window.innerWidth < 768 ? 'bottom top' : 'clamp(bottom top)',
+      scrub: true,
+    }
   });
+});
+
 };
 
 // Preloading images and initializing setup when complete
